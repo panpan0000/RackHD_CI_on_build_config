@@ -76,10 +76,10 @@ else
   rm sed.script
 fi
 
-ON_CORE_FORKURL=${ON_CORE_FORKURL-https://github.com/RackHD/on-core.git}
-if [ "${ON_CORE_FORKURL}" != "https://github.com/RackHD/on-core.git" ]; then
+ON_CORE_FORKURL=${ON_CORE_FORKURL-https://github.com/lanchongyizu/RackHD_CI_on_core.git}
+if [ "${ON_CORE_FORKURL}" != "https://github.com/lanchongyizu/RackHD_CI_on_core.git" ]; then
   if [ -e "../build/package.json" ]; then
-    sed -i "s|"git+https://github.com/RackHD/on-core.git"|"git+${ON_CORE_FORKURL}"|" ../build/package.json
+    sed -i "s|"git+https://github.com/lanchongyizu/RackHD_CI_on_core.git"|"git+${ON_CORE_FORKURL}"|" ../build/package.json
   fi
 fi
 
@@ -89,10 +89,10 @@ if [ ! -z "${ON_CORE_COMMIT}" ]; then
   fi
 fi
 
-ON_TASKS_FORKURL=${ON_TASKS_FORKURL-https://github.com/RackHD/on-tasks.git}
-if [ "${ON_TASKS_FORKURL}" != "https://github.com/RackHD/on-tasks.git" ]; then
+ON_TASKS_FORKURL=${ON_TASKS_FORKURL-https://github.com/lanchongyizu/RackHD_CI_on_tasks.git}
+if [ "${ON_TASKS_FORKURL}" != "https://github.com/lanchongyizu/RackHD_CI_on_tasks.git" ]; then
   if [ -e "../build/package.json" ]; then
-    sed -i "s|"git+https://github.com/RackHD/on-tasks.git"|"git+${ON_TASKS_FORKURL}"|" ../build/package.json
+    sed -i "s|"git+https://github.com/lanchongyizu/RackHD_CI_on_tasks.git"|"git+${ON_TASKS_FORKURL}"|" ../build/package.json
   fi
 fi
 
